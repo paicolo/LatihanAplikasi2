@@ -1,6 +1,5 @@
 package com.example.latihanaplikasi2.model
 
-import javax.xml.transform.Source
 
 data class Article(
   val author: String,

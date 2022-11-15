@@ -9,6 +9,7 @@ import kotlinx.coroutines.launch
 
 class NewsViewModel : ViewModel() {
     init {
+        println("Kepanggil")
         getListNews()
     }
     fun getListNews(){
@@ -18,6 +19,7 @@ class NewsViewModel : ViewModel() {
 
             articles.forEach{
                 article: Article ->
+                println(article.toString())
                 Log.d("response", article.toString())
             }
         }
