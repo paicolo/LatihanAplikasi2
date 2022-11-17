@@ -3,6 +3,7 @@ package com.example.latihanaplikasi2.ui
 import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.latihanaplikasi2.model.Article
@@ -10,7 +11,7 @@ import com.example.latihanaplikasi2.network.Api
 import kotlinx.coroutines.launch
 
 class NewsViewModel : ViewModel() {
-    val newsUiState: List<Article> by mutableStateOf(listOf())
+    var newsUiState: List<Article> by mutableStateOf(listOf())
     init {
         println("Kepanggil")
         getListNews()
